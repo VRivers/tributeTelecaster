@@ -1,0 +1,238 @@
+
+body {
+/* Native font stack https://getbootstrap.com/docs/4.2/content/reboot/#native-font-stack */
+font-family: 'Oswald';
+font-size: 1.3rem;
+font-weight: 300;
+text-align: center;
+color: white;
+margin: 0;
+background: #020100 !important;
+}
+.container-fluid {
+  
+  padding:0;
+}
+
+.greyText{
+  color:rgb(75, 74, 74);
+}
+
+.noLink {
+  text-decoration: none;
+  color:white;
+  
+}
+.noLink:hover {
+text-decoration: none;
+color:#C59B61;
+}
+
+
+/*------------------------------------------------------Imagen Telecaster inicial, logo de Fender y menu------------------------------------------------------*/
+
+#cabecera{
+  height:100%;
+  position: relative;
+}
+
+  #tribute-enun{
+  position: absolute;
+  margin-top:4%;
+  margin-left:75%;
+  z-index: 2;
+  font-size: 1.2vw;
+  letter-spacing: 3;
+  font-weight: 500;
+  opacity:0;
+  animation: 3s ease-out 3s 1 logoStart;
+  animation-fill-mode: forwards;
+  }
+
+  #buttons-menu {
+    position:absolute;
+    height: auto;
+    z-index: 2;
+    margin-top:22%;
+    margin-left:78%;
+    opacity: 0;
+    animation: 3s ease-out 3s 1 logoStart;
+    animation-fill-mode: forwards;
+
+    display:flex;
+    flex-direction: column;
+  }
+
+  .menu-button {
+    width:100%;
+    background-color:transparent;
+    color:white;
+    border-color: gray;
+    border-width: 0.001vw;
+    border-left: none;
+    border-right: none;
+    border-top:none;
+    padding-top: 5%;
+    padding-bottom: 5%;
+    font-size: 2vw;
+  }
+
+  .menu-button:focus{
+    outline:none !important;
+  }
+
+  .menu-button:hover{
+    animation: 5s ease-in-out 2s 1 buttonHover;
+    animation-fill-mode: backwards;
+    animation-play-state:paused;   
+    --colorhover: #C59B61;
+  }
+
+  #imageTelecaster {
+  display:block;
+  height: auto;
+  width: 100%;
+  position:absolute;
+  z-index: 1;
+  animation: 0.1s ease-out 0s 1 logoStart;
+  }
+
+  #fenderlogo{
+
+  position:absolute;
+  height: auto;
+  width: 25%;
+  margin-top:5%;
+  margin-left:21%;
+  opacity:0.9;
+  animation: 3s ease-out 0s 1 logoStart;
+  z-index: 2;
+  }
+
+  #telecasterlogo{
+
+  position:absolute;
+  height: auto;
+  width: 12%;
+  margin-top:11%;
+  margin-left:33%;
+  opacity:0;
+  animation: 3s ease-out 1.5s 1 logoStart;
+  animation-fill-mode: forwards;
+  z-index: 2;
+  }
+
+  #fendernav {
+    
+    height:5%;
+    background-color: #020100;
+    border-style: solid;
+    border-color: white;
+    width: 100%;
+    margin-top: 2.5%;
+    text-align:left;
+    
+   
+  }
+
+
+/*------------------------------------------------------Bloque historia------------------------------------------------------*/
+#history-div {
+ 
+  height:100%;
+  background-color: #261C15;
+ 
+}
+
+
+/*Subtitulo*/
+#history-div p {
+  font-size:1.5rem;
+  margin-top:-6px;
+  }
+#history-div h2{
+  font-size: 4.5vw;
+  padding-top:20px;
+
+}
+
+#planoTelecaster{
+  position:absolute;
+  height: auto;
+  width: 35%;
+  margin-top:3%;
+  margin-left:12%;
+  opacity:0.9;
+  z-index: 2;
+  }
+
+  
+#history-info {
+
+  position:absolute;
+  height: auto;
+  width: 50%;
+  margin-top:1%;
+  margin-left:2%;
+  z-index: 2;
+}
+
+
+
+
+/*------------------------------------------------------Bloque specs------------------------------------------------------*/
+#features-div {
+  height:97.4%;
+  background-color: #8B8C87;
+  color:rgb(36, 39, 36);
+ 
+ 
+  }
+
+#features-div h2{
+  font-size: 4.5vw;
+  padding-top:20px;
+
+}
+
+
+/*Contenido del texto tributo*/
+ul {
+max-width: 750px;
+margin: 45px auto 50px auto;
+text-align: left;
+line-height: 1.4;
+color:#e6e6e6;
+padding-bottom: 30px;
+
+}
+
+li {
+margin:10px;
+}
+
+blockquote {
+
+font-style: italic;
+color: grey;
+font-size: 1rem;
+max-width: 545px;
+margin: 5% auto 50px auto;
+padding-left:80px;
+padding-right:30px;
+text-align: left;
+}
+blockquote p{
+font-size: 1.2rem;
+}
+
+/*Animaciones*/
+@keyframes logoStart {
+    0%   {opacity:0;}
+    100% {opacity:0.9;}
+  }
+
+  @keyframes buttonHover {
+    0%   { color:var(--colorhover)}
+    100% { color:white;}
+  }
